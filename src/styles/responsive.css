@@ -1,0 +1,88 @@
+@media screen and (max-width: 499px) {
+    .nav {
+        z-index: 10;
+        background-color: #F7CCAC;
+        width: 100%;
+        position: absolute;
+
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-500px, 0);
+        transform: translate(-500px, 0);
+
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .nav__item {
+        display: list-item;
+        border-bottom: 1px solid #E0E0E0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .content__heading {
+        font-size: 24px;
+        font-weight: lighter;
+        text-align: center;
+    }
+
+    .reviewCustomer {
+        max-width: 40ch;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .header__menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .restaurants {
+        grid-template-columns: 1fr 1fr;
+    }
+   
+    .resto {
+        grid-template-columns: auto 1fr;
+    }
+   
+    .resto .resto__title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+   
+    .resto .resto__overview {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .nav__list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .restaurants {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .restaurants {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .restaurants {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
